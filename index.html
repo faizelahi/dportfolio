@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faiz Elahi | Portfolio</title>
+  <meta name="description" content="A professional, minimal hybrid portfolio for blue & red team security work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div id="blackhole">
+            <div class="centerHover"><span>ENTER</span></div>
+        </div>
+    </div>
+  <!-- ===== Navigation ===== -->
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="badge">⚡</span>
+        <div id="nameId">
+          <div>FAIZAN</div>
+          <small id="sOC">SOC Analyst</small>
+        </div>
+      </a>
+      <nav class="navlinks">
+        <a class="active" href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#posts">Posts</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button id="themeToggle" class="btn" aria-label="Toggle theme">🌗 Theme</button>
+        <a class="btn" href="#contact">Hire Me</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="home" class="hero container">
+    <div class="hero-grid">
+      <section class="hero-card">
+        <div class="kicker">Who Am i</div>
+        <h1 class="title">Faizan ahmad</h1>
+        <p class="subtitle">I help companies strengthen detection, response, and resilience — and I ethically break things to prove they work. Minimal, measurable, mission-focused.</p>
+
+        <div class="hero-pills">
+          <span class="pill">SIEM Engineering</span>
+          <span class="pill">Threat Hunting</span>
+          <span class="pill">Incident Response</span>
+          <span class="pill red">Adversary Emulation</span>
+          <span class="pill red">Web App Pentest</span>
+          <span class="pill blue">Cloud Security</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="cta-primary">View Work →</a>
+          <a href="#services" class="cta-ghost">Services</a>
+        </div>
+
+        <!-- Scroll down button -->
+        <button id="scrollDown" class="scroll-down" aria-label="Scroll to next section">↓</button>
+
+        <div class="statgrid">
+          <div class="stat"><b>80+ </b><small>Findings remediated</small></div>
+          <div class="stat"><b>12 </b><small>Playbooks authored</small></div>
+          <div class="stat"><b>5+ </b><small>Clouds & stacks</small></div>
+        </div>
+      </section>
+
+      <aside class="hero-card">
+        <div class="kicker">Live Signals</div>
+        <div class="terminal" aria-label="terminal widget">
+          <div class="term-top">
+            <div class="lights">
+              <span class="light l-red"></span>
+              <span class="light l-amber"></span>
+              <span class="light l-green"></span>
+            </div>
+            <div class="term-title">view metrics — prod/soc</div>
+          </div>
+          <div id="termWidget" class="term-body" role="log" aria-live="polite">
+            <div><span class="prompt">soc@blue$</span> <span class="k">hunt</span> --riskscore ">=70" --last "24h"</div>
+            <div class="out">[✔] MQ alerts normalized: <b>1,284</b></div>
+            <div class="out">[i] Top source: <b>10.14.22.17</b> · geo: <b>IN</b></div>
+            <div class="out">[! ] 3 lateral movement patterns merged</div>
+            <div><span class="prompt">red@ops$</span> <span class="k">emulate</span> apt29 --path "phish→c2→exfil"</div>
+            <div class="out">[→] Initial access prevented by SPF+DKIM</div>
+            <div class="out">[→] EDR blocked lsass dump · <span class="g">ok</span></div>
+            <div class="out">[→] DLP caught outbound archive · <span class="warn">review</span></div>
+            <div><span class="prompt">_</span><span class="cursor"></span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===== Services ===== -->
+  <section id="services" class="section container clickable-section">
+    <div class="section-header">
+      <div>
+        <div class="kicker">What I do</div>
+        <h2 class="h2">Services built for measurable outcomes</h2>
+      </div>
+      <a class="btn" href="#contact">Get a Quote →</a>
+    </div>
+    <div class="grid" id="servicesGrid">
+      <!-- Dynamic services will be injected here -->
+    </div>
+  </section>
+
+  <!-- ===== Skills / Experience ===== -->
+  <section id="skills" class="section container">
+    <div class="section-header">
+      <div>
+        <div class="kicker">Capabilities</div>
+        <h2 class="h2">Tools, stacks, and approach</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+  <div class="col-6 card blue-team-card team-card">
+        <div class="kicker">Blue Team</div>
+        <ul class="timeline" role="list">
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>SIEM: Splunk · ELK · Sentinel</h4>
+            <p>Data normalization, CIM, correlation searches, KPIs.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Detection Engineering</h4>
+            <p>Sigma/YARA, EDR tuning, false-positive recovery loops.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Threat Hunting</h4>
+            <p>Hypothesis-driven hunts, TTP mapping, and automation with SOAR.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Telemetry & Enrichment</h4>
+            <p>Enrich logs with asset/context data, build parsers and transforms.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Incident Response</h4>
+            <p>Containment playbooks, forensic captures, and after-action reviews.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Metrics & Reporting</h4>
+            <p>KPIs, MTTx metrics, and executive-friendly dashboards.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Cloud</h4>
+            <p>AWS GuardDuty · Azure Defender · GCP SCC · K8s audit.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 card team-card">
+        <div class="kicker">Red Team</div>
+        <ul class="timeline" role="list">
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Adversary Emulation</h4>
+            <p>MITRE ATT&CK mapped scenarios, atomic tests, C2 hygiene.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Web & API</h4>
+            <p>Auth flaws, IDOR, SSRF, deserialization, race conditions.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Social · Email</h4>
+            <p>Phishing kits, payload crafting, secure mail hardening advice.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>OpSec & C2</h4>
+            <p>Red team OPSEC, C2 resilience, and safe exfiltration methods.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Application Exploits</h4>
+            <p>Chain exploitation, SSRF, RCE patterns, and remediation guidance.</p>
+          </li>
+          <li class="tl-item"><span class="tl-dot"></span>
+            <h4>Post-Exploitation</h4>
+            <p>Persistence, privilege escalation, lateral movement simulations.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section container clickable-section">
+    <div class="section-header">
+      <div>
+        <div class="kicker">Selected</div>
+        <h2 class="h2">Projects & case studies</h2>
+      </div>
+      <a class="btn" href="#contact">Request Full Portfolio</a>
+    </div>
+    <div class="grid" id="projectsGrid">
+      <!-- Dynamic projects will be injected here -->
+    </div>
+  </section>
+
+  <!-- ===== Posts with Alternate Terminal Layout ===== -->
+  <section id="posts" class="section container">
+    <div class="section-header">
+      <div>
+        <div class="kicker">Notes</div>
+        <h2 class="h2">Field logs & quick write-ups</h2>
+      </div>
+      <a class="btn" href="#">All Posts</a>
+    </div>
+
+    <div class="posts">
+      <article class="terminal">
+        <div class="term-top">
+          <div class="lights"><span class="light l-red"></span><span class="light l-amber"></span><span class="light l-green"></span></div>
+          <div class="term-title">post — containment-checklist.md</div>
+        </div>
+        <div class="term-body">
+          <div class="prompt">$</div> rotate secrets · disable stale keys · lock IAM high-risk roles<br/>
+          <div class="out">1. Quarantine host · EDR policy: <span class="g">isolation</span></div>
+          <div class="out">2. Contain identity blast radius · revoke refresh tokens</div>
+          <div class="out">3. Block known C2 egress · DNS + FW rules</div>
+          <div class="out">4. Snapshot disks · preserve volatile artifacts</div>
+          <div class="out">5. Kick off <em>lessons-learned</em> within 7 days</div>
+        </div>
+      </article>
+
+      <article class="terminal">
+        <div class="term-top">
+          <div class="lights"><span class="light l-red"></span><span class="light l-amber"></span><span class="light l-green"></span></div>
+          <div class="term-title">post — detections-sigma-tips.md</div>
+        </div>
+        <div class="term-body">
+          <div class="prompt">$</div> sigma: prefer field presence over equals; enrich with context labels<br/>
+          <div class="out">• Use <span class="k">1 search → many rules</span> with field toggles</div>
+          <div class="out">• Add <code>falsepositives:</code> with real cases</div>
+          <div class="out">• Tie to <span class="k">ATT&CK</span> and playbooks</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section id="testimonials" class="section container">
+    <div class="section-header">
+      <div>
+        <div class="kicker">Feedback</div>
+        <h2 class="h2">What clients say</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-6 card">
+        <blockquote>"Faizan's detection engineering improved our SOC efficiency by 30%. Highly recommended!"<br><span style="color:var(--muted)">— CISO, Fintech Co.</span></blockquote>
+      </div>
+      <div class="col-6 card">
+        <blockquote>"Professional, thorough, and always delivers actionable results."<br><span style="color:var(--muted)">— CTO, SaaS Startup</span></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Certifications ===== -->
+  <section id="certifications" class="section container clickable-section">
+    <div class="section-header">
+      <div>
+        <div class="kicker">Credentials</div>
+        <h2 class="h2">Certifications & Awards</h2>
+      </div>
+    </div>
+    <div class="grid" id="certGrid">
+      <!-- Dynamic certifications will be injected here -->
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section container">
+    <div class="section-header">
+      <div>
+        <div class="kicker">FAQ</div>
+        <h2 class="h2">Frequently Asked Questions</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-12 card">
+        <h3>What is your typical engagement process?</h3>
+        <p>I start with a scoping call, then deliver a tailored plan, followed by hands-on work and a final report.</p>
+        <h3>Do you offer remote services?</h3>
+        <p>Yes, I work with clients worldwide and adapt to their preferred collaboration tools.</p>
+        <h3>How quickly can you start?</h3>
+        <p>Most projects can begin within 1-2 weeks of initial contact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section container">
+    <div class="section-header">
+      <div>
+        <div class="kicker">Work together</div>
+        <h2 class="h2">Let’s secure your product</h2>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="card">
+        <p class="subtitle">Quick facts</p>
+        <ul style="margin:0; padding-left:18px; color:var(--muted)">
+          <li>Based in India · Remote worldwide</li>
+          <li>Engagements: audits, retainers, sprints</li>
+          <li>Response in 24 hours on weekdays</li>
+        </ul>
+        <div class="hero-cta" style="margin-top:14px">
+          <a class="cta-ghost" href="mailto:contact@example.com">Email</a>
+          <a class="cta-ghost" href="#">Download Resume</a>
+        </div>
+      </div>
+      <form class="card" onsubmit="return sendMessage(event)">
+        <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+          <input class="input" placeholder="Your name" id="name" required />
+          <input class="input" placeholder="Email" id="email" type="email" required/>
+        </div>
+        <div style="height:10px"></div>
+        <input class="input" placeholder="Subject" id="subject" required />
+        <div style="height:10px"></div>
+        <textarea class="input" placeholder="Your message" id="message" required></textarea>
+        <div style="height:12px"></div>
+        <button class="cta-primary" type="submit">Send Message</button>
+        <div id="formNote" class="subtitle" style="margin-top:10px"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span></div>
+      <div class="user-details">
+        <span id="userName"></span> · <span id="userEmail"></span>
+      </div>
+      <div>
+        <a class="btn" href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <script src="server.js"></script>
+  <script src="./main.js" defer></script>
+</body>
+</html>
